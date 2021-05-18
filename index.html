@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+
+    <script type="text/javascript" src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="space">
+        <div class="planet-area">
+            <img class="planet" src="images/mars.png" alt="Planet Mars">
+            <img class="rocket" id="rocket" src="images/rocket.png" alt="Rocket">
+        </div>
+        <div class="control-panel">
+            <div class="control-panel__inner">
+                <input class="control-panel__inner__password-field" id="password" type="password" name="input" placeholder="Enter password to unlock" value="">
+                <input class="control-panel__inner__password-button" id="button" type="button" value="OK" onclick="return verifyPassword()">
+                <div class="check-buttons">
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" disabled>
+                    <input type="checkbox" disabled>
+                </div>
+                <div class="levers">
+                    <input type="range" onchange="updateDisplay()" min="0" max="100" value="50" disabled>
+                    <input type="range" onchange="updateDisplay()" min="0" max="100" value="50" disabled>
+                    <input type="range" onchange="updateDisplay()" min="0" max="100" value="50" disabled>
+                    <input type="range" onchange="updateDisplay()" min="0" max="100" value="50" disabled>
+                    <input type="range" onchange="updateDisplay()" min="0" max="100" value="50" disabled>
+                </div>
+                <input class="control-panel__inner__launch-button" id="launch-button" type="button" value="Launch" disabled onclick="return launchRocket()">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

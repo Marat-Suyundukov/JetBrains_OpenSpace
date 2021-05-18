@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.space {
+    background-image: url("images/space.png");
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 360px;
+    left: 360px;
+    transform: rotate(15deg);
+    z-index: 2;
+    max-width: 200px;
+    transition: transform 3s;
+}
+
+.planet {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    z-index: 3;
+    max-width: 700px;
+}
+
+.control-panel {
+    background-color: white;
+    position: absolute;
+    right: 300px;
+    bottom: 35%;
+    padding: 20px;
+    background-image: repeating-linear-gradient(45deg,
+    black,
+    black 20px,
+    yellow 20px,
+    yellow 40px);
+    z-index: 4;
+}
+
+.control-panel__inner {
+    background-color: #252424;
+    padding: 30px;
+}
+
+.control-panel__inner > :not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.control-panel__inner__password-field {
+    margin: 0 10px 0 60px;
+    border: 3px solid yellow;
+    background-color: #252424;
+    font-size: 20px;
+    color: yellow;
+}
+
+.control-panel__inner__password-button {
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.check-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    -webkit-transform: scale(1.25);
+}
+
+.levers > * {
+    -webkit-appearance: slider-vertical;
+    width: 80px;
+    height: 100px;
+}
+
+.levers {
+    display: flex;
+}
+
+.control-panel__inner__launch-button {
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 140px;
+}
+
+#launch-button :disabled {
+    background-color: gray;
+}
